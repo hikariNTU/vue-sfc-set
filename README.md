@@ -1,10 +1,12 @@
+![feature X](./assets/icon.png)
+
 # vue-sfc-set README
 
-Good night
+Tryout vscode extension project. Not for production purpose.
 
 ## Features
 
-\!\[feature X\]\(images/feature-x.png\)
+- create sfc `.vue` and test file `.spec.ts` for single menu command.
 
 ## Known Issues
 
@@ -12,4 +14,4 @@ Not sure
 
 ## Release Notes
 
-- Note?
+- just don't use it.
