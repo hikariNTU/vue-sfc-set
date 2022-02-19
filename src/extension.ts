@@ -8,18 +8,20 @@ export function activate(context: vs.ExtensionContext) {
 	
 	
 	const disposable = vs.commands.registerCommand('vue-sfc-set.createSet', (path: vs.Uri) => {
-		const setting = vs.workspace.getConfiguration('sfcset');
+		const setting = vs.workspace.getConfiguration('sfcset') as SfcsetSetting;
 		const createFile = (name: string) => {
 			const ws = new vs.WorkspaceEdit();
 
 			const sfcFilePath = vs.Uri.joinPath(path, `${name}.vue`);
-			const testFilePath = vs.Uri.joinPath(path, `${name}.spec.${setting.sfcLang}`);
-
+			
 			ws.createFile(sfcFilePath, {overwrite: false, ignoreIfExists: true});
-			ws.createFile(testFilePath, {overwrite: false, ignoreIfExists: true});
-
 			ws.insert(sfcFilePath, new vs.Position(0, 0), getSfcText(name, setting as SfcsetSetting));
-			ws.insert(testFilePath, new vs.Position(0, 0), getTestText(name));
+
+			if(setting.testFile){
+				const testFilePath = vs.Uri.joinPath(path, `${name}.spec.${setting.sfcLang}`);
+				ws.createFile(testFilePath, {overwrite: false, ignoreIfExists: true});
+				ws.insert(testFilePath, new vs.Position(0, 0), getTestText(name));
+			}
 
 			vs.workspace.applyEdit(ws);
 		};

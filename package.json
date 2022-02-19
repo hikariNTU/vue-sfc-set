@@ -2,14 +2,14 @@
 	"name": "vue-sfc-set",
 	"displayName": "Vue SFC set",
 	"description": "Create sfc component and test file in single command",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": {
 		"name": "hikariNTU"
 	},
 	"publisher": "hikariNTU",
 	"icon": "assets/icon.png",
 	"engines": {
-		"vscode": "^1.64.0"
+		"vscode": "^1.60.0"
 	},
 	"categories": [
 		"Other"
@@ -23,6 +23,11 @@
 			{
 				"title": "sfc detail",
 				"properties": {
+					"sfcset.testFile": {
+						"description": "Generate test file beside SFC",
+						"type": "boolean",
+						"default": "true"
+					},
 					"sfcset.sfcLang": {
 						"description": "main language used for sfc",
 						"type": "string",

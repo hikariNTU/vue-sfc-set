@@ -15,6 +15,7 @@ export enum SfcStyleFormat {
 }
 
 export interface SfcsetSetting extends WorkspaceConfiguration {
+  testFile: boolean;
   sfcLang: SfcLang;
   styleEnable: boolean;
   styleLang: SfcStyleFormat;
