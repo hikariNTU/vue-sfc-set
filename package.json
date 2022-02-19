@@ -1,12 +1,13 @@
 {
 	"name": "vue-sfc-set",
-	"displayName": "vue-sfc-set",
+	"displayName": "Vue SFC set",
 	"description": "Create sfc component and test file in single command",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": {
 		"name": "hikariNTU"
 	},
-	"icon": "assets/icon-sm.png",
+	"publisher": "hikariNTU",
+	"icon": "assets/icon.png",
 	"engines": {
 		"vscode": "^1.64.0"
 	},
@@ -18,6 +19,50 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"configuration": [
+			{
+				"title": "sfc detail",
+				"properties": {
+					"sfcset.sfcLang": {
+						"description": "main language used for sfc",
+						"type": "string",
+						"default": "ts",
+						"enum": [
+							"ts",
+							"js",
+							"jsx",
+							"tsx"
+						]
+					},
+					"sfcset.styleEnable": {
+						"description": "enable style block generation",
+						"type": "boolean",
+						"default": true
+					},
+					"sfcset.styleLang": {
+						"description": "style element attributes",
+						"type": "string",
+						"default": "css",
+						"enum": [
+							"css",
+							"scss",
+							"sass",
+							"stylus"
+						]
+					},
+					"sfcset.styleScope": {
+						"description": "Scope style block",
+						"type": "boolean",
+						"default": false
+					},
+					"sfcset.styleModule": {
+						"description": "Module style block",
+						"type": "boolean",
+						"default": false
+					}
+				}
+			}
+		],
 		"commands": [
 			{
 				"command": "vue-sfc-set.createSet",
@@ -29,7 +74,8 @@
 			"explorer/context": [
 				{
 					"command": "vue-sfc-set.createSet",
-					"group": "2_workspace"
+					"group": "2_workspace",
+					"when": "explorerResourceIsFolder"
 				}
 			]
 		}
