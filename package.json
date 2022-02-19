@@ -6,7 +6,7 @@
 	"author": {
 		"name": "hikariNTU"
 	},
-	"icon": "./assets/icon-sm.png",
+	"icon": "assets/icon-sm.png",
 	"engines": {
 		"vscode": "^1.64.0"
 	},
