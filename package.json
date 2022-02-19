@@ -9,7 +9,7 @@
 	"publisher": "hikariNTU",
 	"icon": "assets/icon.png",
 	"engines": {
-		"vscode": "^1.60.0"
+		"vscode": "^1.64.0"
 	},
 	"categories": [
 		"Other"
