@@ -2,5 +2,6 @@
 <rect width="16" height="16" fill="white"/>
 <path d="M2 1H1V15H4.5L11.5 2H15V1H11L4 14H2V1Z" fill="#C4C4C4"/>
 <path d="M5 3H3V4H5V6H6V4H8V3H6V1H5V3Z" fill="#C4C4C4"/>
-<path d="M11.5 15L9 9H10L12 14L14 9H15L12.5 15H11.5Z" fill="#C4C4C4"/>
+<circle cx="11.5" cy="11.5" r="3" stroke="#C4C4C4"/>
+<path d="M11 12V11H12V12H11Z" fill="#C4C4C4"/>
 </svg>

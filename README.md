@@ -1,4 +1,4 @@
-![feature X](./assets/icon.png)
+![feature X](./assets/banner.png)
 
 # vue-sfc-set README
 
